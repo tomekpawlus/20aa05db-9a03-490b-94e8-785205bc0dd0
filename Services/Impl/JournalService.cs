@@ -14,7 +14,7 @@ namespace _20aa05db_9a03_490b_94e8_785205bc0dd0.Services.Impl
             _dbContext = dbContext;
         }
 
-        public IEnumerable<JournalEvent> GetPagedJournalEvents(int skip, int take, JournalEventFilter filter)
+        public IEnumerable<JournalEvent> GetPagedJournalEvents(int skip, int take, JournalEventFilter? filter)
         {
             IQueryable<JournalEvent> query = _dbContext.JournalEvents;
 
