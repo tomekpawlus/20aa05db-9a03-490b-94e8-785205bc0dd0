@@ -15,7 +15,7 @@ namespace _20aa05db_9a03_490b_94e8_785205bc0dd0.Controllers
             _journalService = journalService;
         }
 
-        [HttpGet("getRange")]
+        [HttpPost("getRange")]
         public IActionResult GetPagedJournalEvents(int skip = 0, int take = 10, [FromBody] JournalEventFilter filter = null)
         {
             var journalEvents = _journalService.GetPagedJournalEvents(skip, take, filter);
